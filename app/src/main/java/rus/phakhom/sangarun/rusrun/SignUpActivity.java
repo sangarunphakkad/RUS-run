@@ -11,10 +11,12 @@ import android.widget.RadioGroup;
 public class SignUpActivity extends AppCompatActivity {
 
     //Explicit
-    private EditText nameEditText,userEditText,passEditText;
+    private EditText nameEditText,userEditText,passwortEditText;
     private RadioGroup radioGroup;
     private RadioButton avata0RadioButton,avata1RadioButton,avata2RadioButton,
             avata3RadioButton,avata4RadioButton;
+    private String nameString, userString, passwortString, avataString;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +26,7 @@ public class SignUpActivity extends AppCompatActivity {
         //Bind Widget
         nameEditText = (EditText) findViewById(R.id.editText);
         userEditText = (EditText) findViewById(R.id.editText2);
-        passEditText = (EditText) findViewById(R.id.editText3);
+        passwortEditText = (EditText) findViewById(R.id.editText3);
         radioGroup = (RadioGroup) findViewById(R.id.radAvata);
         avata0RadioButton = (RadioButton) findViewById(R.id.radioButton);
         avata1RadioButton = (RadioButton) findViewById(R.id.radioButton2);
@@ -38,5 +40,12 @@ public class SignUpActivity extends AppCompatActivity {
 
     public void clickSignUpSign(View view) {
 
+        //Gat Value from Edit Text
+        nameString = nameEditText.getText().toString().trim();
+        userString = userEditText.getText().toString().trim();
+        passwortString = passwortEditText.getText().toString().trim();
+
+
     }   // clickSignUp
+
 }   // Main Class
