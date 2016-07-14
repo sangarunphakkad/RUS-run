@@ -1,6 +1,7 @@
 package rus.phakhom.sangarun.rusrun;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private static final String urlLogo = "http://swiftcodingthai.com/rus/image/logo_rus.png";
     private String userString,passwordString;
+    private static final String urlJSon = "http://swiftcodingthai.com/rus/get_user_kad.php";
 
 
     @Override
@@ -31,8 +33,20 @@ public class MainActivity extends AppCompatActivity {
 
         //Load Image from Server
 
-
     }   //Main Method
+
+    //create Inner Class
+    private class SyUser extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected String doInBackground(Void... params) {
+            return null;
+        }   //doInBack
+
+
+
+    }   //SynUser Class
+
 
 
     public void clickSignIn(View view) {
